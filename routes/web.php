@@ -1,7 +1,5 @@
 <?php
 
-/** @var \Laravel\Lumen\Routing\Router $router */
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -13,6 +11,7 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+$router->get('/', 'Controller@index');
+$router->post('/', 'Controller@store');
+$router->put('/{id}', 'Controller@update');
+$router->delete('/{id}', 'Controller@delete');
