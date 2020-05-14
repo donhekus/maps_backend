@@ -14,5 +14,5 @@
 $router->get('/layout', 'MainController@index');
 $router->post('/layout', 'MainController@store');
 $router->get('/layout/{id}', 'MainController@edit');
-$router->put('/layout/{id}', 'MainController@update');
-$router->delete('/layout/{id}', 'MainController@delete');
+$router->post('/layout/{id}', 'MainController@update');
+$router->post('/layout/{id}/delete', 'MainController@delete');
