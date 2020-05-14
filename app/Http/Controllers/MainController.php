@@ -24,7 +24,7 @@ class MainController extends Controller
      */
     public function store(Request $request)
     {
-        $popup = new Popup($request->all());
+        $popup = Popup::create($request->all());
         foreach ($request->input('elements') as $item) {
             $popup->elements()->create($item);
         }
