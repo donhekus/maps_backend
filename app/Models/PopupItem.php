@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @package App\Models
  *
  * @property int    $id
+ * @property int    $popup_id
  * @property string $type
  * @property int    $size
  * @property int    $order
@@ -25,8 +26,9 @@ class PopupItem extends Model
      * @var array
      */
     protected $fillable = [
+        'popup_id',
         'type',
-        'size',
+        'width',
         'order',
     ];
 

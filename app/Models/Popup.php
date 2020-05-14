@@ -10,11 +10,11 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * Class Popup
  * @package App\Models
  *
- * @property int $id
+ * @property int    $id
  * @property string $name
  * @property string $hash
- * @property int $width
- * @property int $height
+ * @property int    $width
+ * @property int    $height
  * @property Carbon $created_at
  * @property Carbon $updated_at
  */
@@ -29,13 +29,13 @@ class Popup extends Model
         'name',
         'hash',
         'width',
-        'height'
+        'height',
     ];
 
     /**
      * @return HasMany
      */
-    public function popupItem()
+    public function elements()
     {
         return $this->hasMany(PopupItem::class);
     }
