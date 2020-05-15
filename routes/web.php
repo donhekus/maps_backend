@@ -17,4 +17,4 @@ $router->get('/layout/{id}', 'MainController@edit');
 $router->get('/layout/{id}', 'MainController@edit');
 $router->post('/layout/{id}', 'MainController@update');
 $router->post('/layout/{id}/delete', 'MainController@delete');
-$router->get('/layout/{name}', 'MainController@getByName');
+$router->get('/maps/{name}', 'MainController@getByName');
