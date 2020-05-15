@@ -74,4 +74,17 @@ class MainController extends Controller
         $popup = Popup::find($id);
         return Response::json($popup->delete());
     }
+
+    /**
+     * @param Request $request
+     * @param string  $name
+     *
+     * @return JsonResponse
+     */
+    public function getByName(Request $request, string $name)
+    {
+        $popup = Popup::with('elements')->where('name', $name)->first();
+
+        return Response::json($popup);
+    }
 }
