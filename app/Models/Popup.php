@@ -27,7 +27,6 @@ class Popup extends Model
      */
     protected $fillable = [
         'name',
-        'hash',
         'width',
         'height',
     ];
